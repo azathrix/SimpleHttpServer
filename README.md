@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/AzathrixDev"><img src="https://img.shields.io/badge/GitHub-Azathrix-black.svg" alt="GitHub"></a>
-  <a href="#"><img src="https://img.shields.io/badge/version-1.0.0-green.svg" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/com.azathrix.simple-http-server"><img src="https://img.shields.io/npm/v/com.azathrix.simple-http-server.svg" alt="npm"></a>
   <a href="#license"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
   <a href="https://unity.com/"><img src="https://img.shields.io/badge/Unity-6000.3+-black.svg" alt="Unity"></a>
 </p>
@@ -28,25 +28,30 @@
 
 ## 安装
 
-### 通过 Package Manager (Git URL)
+### 方式一：Package Manager 添加 Scope（推荐）
+
+1. 打开 `Edit > Project Settings > Package Manager`
+2. 在 `Scoped Registries` 中添加：
+   - **Name**: `Azathrix`
+   - **URL**: `https://registry.npmjs.org`
+   - **Scope(s)**: `com.azathrix`
+3. 点击 `Save`
+4. 打开 `Window > Package Manager`
+5. 切换到 `My Registries`
+6. 找到 `Simple Http Server` 并安装
+
+### 方式二：Git URL
 
 1. 打开 `Window > Package Manager`
-2. 点击 `+` > `Add package from git URL`
-3. 输入：
-```
-https://github.com/AzathrixDev/com.azathrix.simple-http-server.git
-```
+2. 点击 `+` > `Add package from git URL...`
+3. 输入：`https://github.com/AzathrixDev/com.azathrix.simple-http-server.git#latest`
 
-### 通过 manifest.json
+### 方式三：npm 命令
 
-在 `Packages/manifest.json` 中添加：
+在项目的 `Packages` 目录下执行：
 
-```json
-{
-  "dependencies": {
-    "com.azathrix.simple-http-server": "1.0.0"
-  }
-}
+```bash
+npm install com.azathrix.simple-http-server
 ```
 
 ## 快速开始
@@ -57,10 +62,8 @@ https://github.com/AzathrixDev/com.azathrix.simple-http-server.git
 
 ### 2. 配置服务器
 
-```
-端口：8080（默认）
-根目录：选择要托管的文件夹
-```
+- **端口**：8080（默认）
+- **根目录**：选择要托管的文件夹
 
 ### 3. 启动服务器
 
@@ -116,15 +119,6 @@ server.Stop();
 - **资源服务器测试** - 模拟 CDN 环境进行开发调试
 - **团队协作** - 局域网内快速分享文件
 
-## 依赖
-
-| 依赖 | 版本 | 说明 |
-|------|------|------|
-| Python | 3.x | 需要在系统 PATH 中 |
-| Unity | 6000.3+ | 最低支持版本 |
-
-> ⚠️ **注意**：请确保系统已安装 Python 3 并添加到环境变量 PATH 中。
-
 ## API 参考
 
 ### LocalHttpServer
@@ -147,6 +141,15 @@ server.Stop();
 | `RootDirectory` | string | 根目录配置 |
 | `AutoStartOnUnityOpen` | bool | 自动启动配置 |
 | `ShowLogs` | bool | 显示日志配置 |
+
+## 依赖
+
+| 依赖 | 版本 | 说明 |
+|------|------|------|
+| Python | 3.x | 需要在系统 PATH 中 |
+| Unity | 6000.3+ | 最低支持版本 |
+
+> ⚠️ **注意**：请确保系统已安装 Python 3 并添加到环境变量 PATH 中。
 
 ## License
 
