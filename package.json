@@ -1,0 +1,12 @@
+﻿{
+    "name": "com.azathrix.simple-http-server",
+    "displayName": "Simple Http Server",
+    "version": "1.0.0",
+    "unity": "6000.3",
+    "description": "\u57fa\u4e8epython\u5b9e\u73b0\u7684\u4e00\u4e2a\u7b80\u5355\u7684http\u6587\u4ef6\u670d\u52a1\u5668",
+    "author": {
+        "name": "Azathrix"
+    },
+    "dependencies": {
+    }
+}
